@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hostel Management System</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: cyan;
+            color: #333;
+        }
+        
+        header {
+            background-color: rgb(42, 42, 42);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        nav {
+            background-color: #495057;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease-in-out; 
+        }
+        
+        nav a:hover {
+            color: cyan; 
+        }
+        
+        .sec {
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            height: fit-content;
+            padding-bottom: 0px;
+            width: 100%;
+        }
+        
+        
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width:fit-content;
+            max-width: 90%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .card label {
+            display: inline-block;
+            text-align: left;
+            width: 150px; /* Adjust width as needed */
+            margin-bottom: 5px;
+        }
+        
+        .card input[type="text"],
+        .card input[type="email"],
+        .card input[type="number"],
+        .card select,
+        .card textarea {
+            width: calc(100% - 170px); /* Adjust width to accommodate label */
+            margin-bottom: 10px;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        .card input[type="submit"] {
+            background-color: rgb(42, 42, 42);
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Hostel Management System</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Rooms</a>
+        <a href="#">Students</a>
+        <a href="#">Reports</a>
+    </nav>
+    <section class="sec">
+        
+            <div class="card">
+                <h2>Register New Entry</h2>
+                <form action="validation.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your name" required><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Your email" required><br>
+                    <label for="enrollment">Enrollment Number:</label>
+                    <input type="text" id="enrollment" name="enrollment" placeholder="Enrollment number" required><br>
+                    <label for="room">Room Number:</label>
+                    <input type="text" id="room" name="room" placeholder="Room number" required><br>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Password" required><br>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Phone number" required><br>
+                    <label for="gender">Gender:</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                    <br>
+                    <label for="language">Language:</label>
+                    <select id="language" name="language">
+                        <option value="">Select language</option>
+                        <option value="english">English</option>
+                        <option value="spanish">Spanish</option>
+                        <option value="french">French</option>
+                        <option value="german">German</option>
+                    </select>
+                    <br><br>
+                    <label for="zip">Zip Code:</label>
+                    <input type="text" id="zip" name="zip" placeholder="Zip code" required>
+                    <br><br>
+                    <label for="about">About:</label>
+                    <textarea id="about" name="about" rows="2" cols="30" placeholder="Write about yourself..."></textarea>
+                    <br><br>
+                    <input type="submit" value="Register">
+                </form>
+            </div>
+        
+    </section>
+    <footer>
+        <p></p>
+    </footer>
+</body>
+</html>
